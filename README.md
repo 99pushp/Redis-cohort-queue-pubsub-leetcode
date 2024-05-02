@@ -14,22 +14,22 @@ This system is designed to handle code submissions from users for various coding
 1. Client (Browser/Postman)
 Description: Initiates code submission requests.
 Functionality: Sends data including code, problem ID, and language in the body of a POST request.
-2. Primary Backend Server Node
+3. Primary Backend Server Node
 Description: Central server handling incoming requests.
 Functionality:
 Receives requests from clients.
 Enqueues requests in Redis for efficient task management.
-3. Redis Queue
+4. Redis Queue
 Description: In-memory data structure store.
 Functionality:
 Acts as a queue for incoming code submission requests.
 Ensures efficient handling and scalability.
-4. Worker Instances
+5. Worker Instances
 Description: Multiple instances responsible for processing code submissions.
 Functionality:
 Pull requests from the Redis queue.
 Process code submissions efficiently.
-5. Web Socket Server
+6. Web Socket Server
 Description: Facilitates real-time communication with clients.
 Functionality:
 Receives events from worker instances.
@@ -50,18 +50,28 @@ User Notifications: Subscribed users receive real-time notifications in their br
 # Technologies Used
 
 Node.js: Powers the backend server and worker instances.
+
 Redis: Used as a queue for task management.
+
 Web Sockets: Facilitates real-time communication with clients.
+
 Express.js: Framework for building the backend server.
+
 Postman: Testing tool for API endpoints.
+
 Getting Started
 
 # To set up and run this system locally, follow these steps:
 
 Clone the repository.
+
 Install Node.js and Redis.
+
 Start Redis server.
+
 Install dependencies using npm install.
+
 Run the server using npm start.
+
 Test code submission functionality using Postman.
 
