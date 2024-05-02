@@ -1,15 +1,15 @@
 # Redis-cohort-queue-pubsub-leetcode
 This contains code for the leetcode like pub-sub basic implementation
 
-#LeetCode-like Platform Architecture README
+# LeetCode-like Platform Architecture README
 
 Welcome to the README for a LeetCode-like platform architecture! This document provides an overview of the system's architecture, highlighting key components and their functionalities. Let's dive in!
 
-#Overview
+# Overview
 
 This system is designed to handle code submissions from users for various coding problems. It ensures seamless processing of code submissions and real-time notifications to users.
 
-#Components
+# Components
 
 1. Client (Browser/Postman)
 Description: Initiates code submission requests.
@@ -35,7 +35,7 @@ Functionality:
 Receives events from worker instances.
 Sends real-time notifications to subscribed users via web sockets.
 
-#Workflow
+# Workflow
 
 Code Submission: Clients submit code, problem ID, and language through a POST request.
 Request Handling: The primary backend server receives the request and enqueues it in Redis.
@@ -43,7 +43,7 @@ Processing: Worker instances pull requests from the Redis queue and process code
 Real-time Notifications: Upon processing completion, events are published to the web socket server.
 User Notifications: Subscribed users receive real-time notifications in their browsers.
 
-#Technologies Used
+# Technologies Used
 
 Node.js: Powers the backend server and worker instances.
 Redis: Used as a queue for task management.
@@ -52,7 +52,7 @@ Express.js: Framework for building the backend server.
 Postman: Testing tool for API endpoints.
 Getting Started
 
-#To set up and run this system locally, follow these steps:
+# To set up and run this system locally, follow these steps:
 
 Clone the repository.
 Install Node.js and Redis.
