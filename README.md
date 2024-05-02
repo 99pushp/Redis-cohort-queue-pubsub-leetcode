@@ -38,9 +38,13 @@ Sends real-time notifications to subscribed users via web sockets.
 # Workflow
 
 Code Submission: Clients submit code, problem ID, and language through a POST request.
+
 Request Handling: The primary backend server receives the request and enqueues it in Redis.
+
 Processing: Worker instances pull requests from the Redis queue and process code submissions.
+
 Real-time Notifications: Upon processing completion, events are published to the web socket server.
+
 User Notifications: Subscribed users receive real-time notifications in their browsers.
 
 # Technologies Used
